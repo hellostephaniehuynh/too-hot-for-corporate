@@ -6,8 +6,7 @@ A static site: no build step, no framework. Just open `index.html` or serve the 
 
 - `index.html` — home: hero, manifesto, product teasers, movement-wide waitlist
 - `products.html` — full list of pending drops
-- `product-hat.html` — the "Off the Clock" hat, specs + waitlist
-- `product-croptop.html` — the "Quietly Quit" crop top, specs + waitlist
+- `product-hat.html` — the dad hat, specs + waitlist
 
 ## Turning on the waitlist forms (Formspree)
 
@@ -24,8 +23,8 @@ locally without sending anywhere.
    ```html
    <form class="waitlist-form" data-formspree-id="YOUR_FORM_ID" data-product="hat">
    ```
-   and replace `YOUR_FORM_ID` with your real ID. There are 4 forms total
-   (general waitlist on `index.html` and `products.html`, plus one on each
+   and replace `YOUR_FORM_ID` with your real ID. There are 3 forms total
+   (general waitlist on `index.html` and `products.html`, plus one on the
    product page).
 5. Reload and submit a test entry — it'll land in your Formspree dashboard
    and you can set up an email/Zapier/CSV export from there.
@@ -36,9 +35,9 @@ everything.
 
 ## Editing content
 
-- **Product specs** (material, price, sizing) in `product-hat.html` and
-  `product-croptop.html` are placeholder drafts — search for "not finalized"
-  and "TBD" and swap in real numbers when you have them.
+- **Product specs** (material, price, sizing) in `product-hat.html` are
+  placeholder drafts — search for "not finalized" and "TBD" and swap in real
+  numbers when you have them.
 - **Brand assets** live in `images/` — `smiley-yellow.png` (mark) and
   `wordmark-cream.png` (wordmark), pulled from your original files.
 - **Colors/fonts** are all defined as CSS variables at the top of
