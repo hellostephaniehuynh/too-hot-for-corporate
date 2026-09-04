@@ -585,7 +585,9 @@ nav.primary a[aria-current="page"] {
   margin-bottom: 6px;
 }
 .field input[type="email"],
-.field input[type="text"] {
+.field input[type="text"],
+.field input[type="number"],
+.field textarea {
   width: 100%;
   padding: 13px 14px;
   border: var(--border);
@@ -594,10 +596,27 @@ nav.primary a[aria-current="page"] {
   font-size: 15px;
   color: var(--ink);
 }
-.field input:focus {
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+.field input:focus,
+.field textarea:focus {
   outline: 3px solid var(--yellow);
   outline-offset: 0;
 }
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.field-divider {
+  border-top: var(--border-thin);
+  padding-top: 16px;
+  margin: 20px 0 16px;
+}
+.field-divider .eyebrow { color: var(--ink-soft); }
 .form-note {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -624,6 +643,49 @@ nav.primary a[aria-current="page"] {
 .waitlist-form.is-success button[type="submit"],
 .waitlist-form.is-success .form-note { display: none; }
 .waitlist-form.is-success .form-success { display: block; }
+
+/* ---------------- the record (story wall) ---------------- */
+.record-grid {
+  display: grid;
+  gap: 20px;
+  max-width: 760px;
+}
+.record-card {
+  border: var(--border);
+  background: var(--cream-dim);
+  padding: 28px 30px;
+}
+.record-card__id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.record-card__body {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.record-card__byline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  border-top: var(--border-thin);
+  padding-top: 14px;
+  letter-spacing: 0.02em;
+}
+.record-card__byline b { color: var(--ink); font-weight: 600; }
+.record-empty {
+  border: var(--border-thin);
+  padding: 40px 30px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
 
 /* ---------------- how it works / general waitlist ---------------- */
 .join {
@@ -740,6 +802,7 @@ footer.site .fine-print {
   .product-detail .wrap { grid-template-columns: 1fr; }
   .product-detail__art { position: static; max-width: 420px; margin: 0 auto; }
   .join__grid { grid-template-columns: 1fr; }
+  .field-row { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
