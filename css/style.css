@@ -14,7 +14,7 @@
   --yellow-dim: #f2cf3a;
   --stone: #c9c4b4;
   --stone-line: #d8d3c2;
-  --clock-red: #e8492a;
+  --clock-red: #b82f14;
 
   --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -617,6 +617,17 @@ nav.primary a[aria-current="page"] {
   margin: 20px 0 16px;
 }
 .field-divider .eyebrow { color: var(--ink-soft); }
+
+/* honeypot spam-trap field: invisible and unreachable for real visitors,
+   still present in the DOM for simple bots to fill in */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
 .form-note {
   font-family: var(--font-mono);
   font-size: 11px;

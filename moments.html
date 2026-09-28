@@ -16,7 +16,11 @@
 <meta name="twitter:title" content="the record — too hot for corporate.">
 <meta name="twitter:description" content="Anonymous incident reports from people who got told they were too much. File your own — initials only.">
 <meta name="twitter:image" content="https://toohotfor.com/images/og-image.png">
-<link rel="icon" href="images/smiley-yellow.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -68,7 +72,7 @@
 
       <div class="field">
         <label for="moment-text">Your moment</label>
-        <textarea id="moment-text" name="moment" placeholder="what happened..." required></textarea>
+        <textarea id="moment-text" name="moment" placeholder="what happened..." maxlength="600" required></textarea>
       </div>
 
       <div class="field">
@@ -83,11 +87,11 @@
       <div class="field-row">
         <div class="field">
           <label for="moment-title">Job title</label>
-          <input type="text" id="moment-title" name="title" placeholder="Senior Manager">
+          <input type="text" id="moment-title" name="title" placeholder="Senior Manager" maxlength="60">
         </div>
         <div class="field">
           <label for="moment-company">Company</label>
-          <input type="text" id="moment-company" name="company" placeholder="optional">
+          <input type="text" id="moment-company" name="company" placeholder="optional" maxlength="60">
         </div>
         <div class="field">
           <label for="moment-age">Age</label>
@@ -95,6 +99,7 @@
         </div>
       </div>
 
+      <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="btn btn--yellow btn--block" style="margin-top:22px;">file the report →</button>
       <p class="form-note">by submitting you agree we may publish your moment on this page, showing only what you filled in above. no name, no email, no way to trace it back to you.</p>
       <p class="form-error" role="alert">Something went wrong — try again in a minute.</p>
@@ -161,6 +166,7 @@
         <label for="general-email-3">Email address</label>
         <input type="email" id="general-email-3" name="email" placeholder="you@notmyworkemail.com" required>
       </div>
+      <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="btn btn--yellow btn--block">submit application →</button>
       <p class="form-note">by submitting you agree to receive drop emails. unsubscribe anytime, no exit interview required.</p>
       <p class="form-error" role="alert">Something went wrong — try again in a minute.</p>
@@ -184,6 +190,7 @@
       <a href="moments.html">the record</a>
       <a href="index.html#join">waitlist</a>
       <a href="privacy-policy.html">privacy</a>
+      <a href="terms.html">terms</a>
       <a href="mailto:hello@toohotfor.com">contact</a>
     </div>
   </div>
