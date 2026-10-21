@@ -881,3 +881,13 @@ main:focus { outline: none; }
 .ticker.is-paused .ticker__track { animation-play-state: paused; }
 .ticker__pause:focus-visible { outline: 3px solid var(--yellow); outline-offset: -3px; }
 .form-success:focus { outline: none; }
+
+/* product gallery: line art + photo stacked */
+.product-detail__gallery {
+  display: grid;
+  gap: 24px;
+  align-self: start;
+}
+.product-detail__gallery .product-detail__art { position: static; }
+.product-detail__photo { margin: 0; border: var(--border); box-shadow: 8px 8px 0 var(--ink); background: var(--cream-dim); }
+.product-detail__photo img { width: 100%; height: auto; display: block; }
