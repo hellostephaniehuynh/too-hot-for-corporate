@@ -11,6 +11,18 @@
     });
   }
 
+  // Pause control for the scrolling banner (WCAG 2.2.2)
+  var tickerBar = document.querySelector(".ticker");
+  var pauseBtn = document.getElementById("tickerPause");
+  if (tickerBar && pauseBtn) {
+    pauseBtn.addEventListener("click", function () {
+      var paused = tickerBar.classList.toggle("is-paused");
+      pauseBtn.setAttribute("aria-pressed", paused ? "true" : "false");
+      pauseBtn.setAttribute("aria-label", paused ? "resume scrolling banner" : "pause scrolling banner");
+      pauseBtn.textContent = paused ? "play" : "pause";
+    });
+  }
+
   // Waitlist forms POST to Formspree (https://formspree.io).
   // Each form carries data-formspree-id — swap "YOUR_FORM_ID" for the real
   // endpoint id from your Formspree dashboard (see README.md) and this
@@ -49,6 +61,8 @@
         .then(function (response) {
           if (response.ok) {
             form.classList.add("is-success");
+            var ok = form.querySelector(".form-success");
+            if (ok) { ok.setAttribute("tabindex", "-1"); ok.focus(); }
           } else {
             throw new Error("Form submission failed");
           }

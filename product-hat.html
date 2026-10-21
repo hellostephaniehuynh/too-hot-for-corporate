@@ -28,11 +28,14 @@
 </head>
 <body>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
+<a class="skip-link" href="#main">skip to main content</a>
+
+<div class="ticker">
+  <div class="ticker__track" aria-hidden="true">
     <span>QUIETLY QUIT</span><span>STILL COLLECTING PTO</span><span>OFF THE CLOCK MENTALLY SINCE 2019</span><span>ENOUGH TO STAY EMPLOYED, NOTHING MORE</span><span>NOT A TEAM PLAYER, A TEAM MEMBER</span><span>TOO HOT FOR CORPORATE</span>
     <span>QUIETLY QUIT</span><span>STILL COLLECTING PTO</span><span>OFF THE CLOCK MENTALLY SINCE 2019</span><span>ENOUGH TO STAY EMPLOYED, NOTHING MORE</span><span>NOT A TEAM PLAYER, A TEAM MEMBER</span><span>TOO HOT FOR CORPORATE</span>
   </div>
+  <button type="button" class="ticker__pause" id="tickerPause" aria-pressed="false" aria-label="pause scrolling banner">pause</button>
 </div>
 
 <header class="site" id="siteHeader">
@@ -48,6 +51,7 @@
   </div>
 </header>
 
+<main id="main" tabindex="-1">
 <section class="product-detail">
   <div class="wrap">
     <div class="product-detail__art">
@@ -64,8 +68,9 @@
       <p class="product-detail__subtitle">unstructured dad hat / requisition no. 001</p>
       <p class="product-detail__lede">For the version of you that's already mentally clocked out before the standup ends. Heavyweight twill, unbothered silhouette, embroidered wordmark. Not in production yet — but the waitlist decides what gets made first.</p>
 
-      <dl class="spec-sheet">
+      <div class="spec-sheet">
         <div class="spec-sheet__head">spec sheet — draft, subject to change</div>
+        <dl>
         <div class="spec-row">
           <dt>Material</dt>
           <dd>Heavyweight cotton twill, unstructured low-profile crown</dd>
@@ -91,9 +96,10 @@
           <dd>TBD — waitlist size decides timing</dd>
         </div>
       </dl>
+      </div>
 
       <form class="waitlist-form" data-formspree-id="xgawlzzl" data-product="hat">
-        <h4>join the waitlist</h4>
+        <h2 class="waitlist-form__title">join the waitlist</h2>
         <p class="waitlist-form__sub">Get notified the moment this one's real. First access, no obligation.</p>
         <div class="field">
           <label for="hat-email">Email address</label>
@@ -112,6 +118,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="site">
   <div class="wrap">

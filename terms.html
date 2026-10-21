@@ -28,11 +28,14 @@
 </head>
 <body>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
+<a class="skip-link" href="#main">skip to main content</a>
+
+<div class="ticker">
+  <div class="ticker__track" aria-hidden="true">
     <span>QUIETLY QUIT</span><span>STILL COLLECTING PTO</span><span>OFF THE CLOCK MENTALLY SINCE 2019</span><span>ENOUGH TO STAY EMPLOYED, NOTHING MORE</span><span>NOT A TEAM PLAYER, A TEAM MEMBER</span><span>TOO HOT FOR CORPORATE</span>
     <span>QUIETLY QUIT</span><span>STILL COLLECTING PTO</span><span>OFF THE CLOCK MENTALLY SINCE 2019</span><span>ENOUGH TO STAY EMPLOYED, NOTHING MORE</span><span>NOT A TEAM PLAYER, A TEAM MEMBER</span><span>TOO HOT FOR CORPORATE</span>
   </div>
+  <button type="button" class="ticker__pause" id="tickerPause" aria-pressed="false" aria-label="pause scrolling banner">pause</button>
 </div>
 
 <header class="site" id="siteHeader">
@@ -48,6 +51,7 @@
   </div>
 </header>
 
+<main id="main" tabindex="-1">
 <section class="page-head">
   <div class="wrap">
     <span class="eyebrow">legal — internal memo</span>
@@ -100,6 +104,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="site">
   <div class="wrap">
