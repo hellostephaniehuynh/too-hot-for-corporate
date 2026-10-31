@@ -78,6 +78,18 @@
   });
 })();
 
+// Hat stock — edit these numbers as hats sell (set to 0 for sold out).
+var HAT_STOCK = { cream: 49, black: 49 };
+var HAT_NAMES = { cream: "cream", black: "washed black" };
+(function () {
+  function label(n) { return n > 0 ? n + " left" : "sold out"; }
+  document.querySelectorAll("[data-stock]").forEach(function (el) { el.textContent = "· " + label(HAT_STOCK[el.getAttribute("data-stock")]); });
+  var total = document.querySelector("[data-stock-total]");
+  if (total) total.textContent = HAT_STOCK.cream + " cream + " + HAT_STOCK.black + " washed black — limited run";
+  var sum = document.querySelector("[data-stock-summary]");
+  if (sum) sum.textContent = HAT_STOCK.cream + " cream · " + HAT_STOCK.black + " washed black left";
+})();
+
 // Hat page: color picker swaps the Stripe link; links still set to STRIPE_LINK_* stay disabled.
 (function () {
   var btn = document.getElementById("buyBtn");
@@ -86,6 +98,15 @@
   function apply() {
     var chosen = document.querySelector('input[name="color"]:checked');
     var url = btn.getAttribute(chosen && chosen.value === "black" ? "data-stripe-black" : "data-stripe-cream");
+    var color = chosen && chosen.value === "black" ? "black" : "cream";
+    if (HAT_STOCK[color] <= 0) {
+      btn.removeAttribute("href");
+      btn.setAttribute("aria-disabled", "true");
+      btn.textContent = "sold out in " + HAT_NAMES[color];
+      if (note) note.textContent = "sold out — use restock alerts below to hear when it's back.";
+      return;
+    }
+    btn.textContent = "buy the hat — $18 →";
     if (!url || url.indexOf("STRIPE_LINK") === 0) {
       btn.removeAttribute("href");
       btn.setAttribute("aria-disabled", "true");

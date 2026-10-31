@@ -23,7 +23,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -71,14 +71,15 @@
       </div>
       <h1>the too hot for corporate hat</h1>
       <div class="lb-price">$18</div>
+      <p class="lb-stock" aria-live="polite"><span data-stock-total></span></p>
       <p class="product-detail__subtitle">unstructured dad hat / requisition no. 001</p>
       <p class="product-detail__lede">For the version of you that's already mentally clocked out before the standup ends. Heavyweight twill, unbothered silhouette, embroidered wordmark. Cream or washed black. $18.</p>
 
             <fieldset class="lb-colors" id="colors">
         <legend>color</legend>
         <div class="lb-colors__opts">
-          <span><input type="radio" name="color" id="c-cream" value="cream" checked><label for="c-cream"><span class="sw sw--cream"></span>cream</label></span>
-          <span><input type="radio" name="color" id="c-black" value="black"><label for="c-black"><span class="sw sw--black"></span>washed black</label></span>
+          <span><input type="radio" name="color" id="c-cream" value="cream" checked><label for="c-cream"><span class="sw sw--cream"></span>cream <span class="lb-count" data-stock="cream"></span></label></span>
+          <span><input type="radio" name="color" id="c-black" value="black"><label for="c-black"><span class="sw sw--black"></span>washed black <span class="lb-count" data-stock="black"></span></label></span>
         </div>
       </fieldset>
       <a class="btn btn--yellow btn--block" id="buyBtn" href="STRIPE_LINK_CREAM" data-stripe-cream="STRIPE_LINK_CREAM" data-stripe-black="STRIPE_LINK_BLACK">buy the hat — $18 →</a>
