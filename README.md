@@ -13,21 +13,11 @@ A static site: no build step, no framework. Just open `index.html` or serve the 
 
 ## Turning on the waitlist / record forms (Formspree)
 
-Forms submit via [Formspree](https://formspree.io). Most already have a real
-form ID (`xgawlzzl`); the one exception is the "file a report" form on
-`moments.html`, which is still pointed at the placeholder `YOUR_FORM_ID` (see
-below).
-
-1. Create a free account at [formspree.io](https://formspree.io) if you
-   haven't, or reuse the existing form.
-2. To wire up the record form specifically: create a new Formspree form (a
-   separate one keeps story submissions out of your waitlist inbox), copy its
-   ID, and in `moments.html` find:
-   ```html
-   <form class="waitlist-form" data-formspree-id="YOUR_FORM_ID" data-product="moment" ...>
-   ```
-   and swap in the real ID.
-3. Reload and submit a test entry — it lands in your Formspree dashboard.
+Forms submit via [Formspree](https://formspree.io). The waitlist forms use
+form `xgawlzzl`; the record form on `moments.html` uses its own form
+`xeaaragp` ("The Record"), which keeps story submissions out of the waitlist
+inbox. To change an ID, edit the `data-formspree-id` attribute on the form.
+Submit a test entry and it lands in the Formspree dashboard.
 
 Every form includes a hidden honeypot field (`_gotcha`) — Formspree's
 built-in spam trap. Real visitors never see or fill it; simple bots do, and
