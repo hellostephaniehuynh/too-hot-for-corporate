@@ -77,3 +77,24 @@
     });
   });
 })();
+
+// Hat page: color picker swaps the Stripe link; links still set to STRIPE_LINK_* stay disabled.
+(function () {
+  var btn = document.getElementById("buyBtn");
+  if (!btn) return;
+  var note = document.getElementById("buyNote");
+  function apply() {
+    var chosen = document.querySelector('input[name="color"]:checked');
+    var url = btn.getAttribute(chosen && chosen.value === "black" ? "data-stripe-black" : "data-stripe-cream");
+    if (!url || url.indexOf("STRIPE_LINK") === 0) {
+      btn.removeAttribute("href");
+      btn.setAttribute("aria-disabled", "true");
+      if (note) note.textContent = "checkout opens very soon — use restock alerts below to get the email.";
+    } else {
+      btn.setAttribute("href", url);
+      btn.removeAttribute("aria-disabled");
+    }
+  }
+  document.querySelectorAll('input[name="color"]').forEach(function (r) { r.addEventListener("change", apply); });
+  apply();
+})();

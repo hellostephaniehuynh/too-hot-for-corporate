@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>too hot for corporate hat</title>
-<meta name="description" content="The too hot for corporate hat — an unstructured dad hat. Pending drop — join the waitlist to get first access.">
+<meta name="description" content="The too hot for corporate hat — an unstructured dad hat. $18, cream or washed black.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://toohotfor.com/product-hat.html">
 <meta property="og:title" content="too hot for corporate hat">
-<meta property="og:description" content="An unstructured dad hat. Pending drop — join the waitlist to get first access.">
+<meta property="og:description" content="An unstructured dad hat. $18, cream or washed black.">
 <meta property="og:image" content="https://toohotfor.com/images/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="too hot for corporate hat">
-<meta name="twitter:description" content="An unstructured dad hat. Pending drop — join the waitlist to get first access.">
+<meta name="twitter:description" content="An unstructured dad hat. $18, cream or washed black.">
 <meta name="twitter:image" content="https://toohotfor.com/images/og-image.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -64,17 +64,28 @@
     </div>
 
     <div>
-      <a class="back-link" href="products.html">← back to all pending drops</a>
+      <a class="back-link" href="products.html">← back to the shop</a>
       <div class="product-detail__eyebrow-row">
         <span class="index eyebrow">item / 001</span>
-        <span class="status-tag">pending</span>
+        <span class="status-tag">available now</span>
       </div>
       <h1>the too hot for corporate hat</h1>
+      <div class="lb-price">$18</div>
       <p class="product-detail__subtitle">unstructured dad hat / requisition no. 001</p>
-      <p class="product-detail__lede">For the version of you that's already mentally clocked out before the standup ends. Heavyweight twill, unbothered silhouette, embroidered wordmark. Not in production yet — but the waitlist decides what gets made first.</p>
+      <p class="product-detail__lede">For the version of you that's already mentally clocked out before the standup ends. Heavyweight twill, unbothered silhouette, embroidered wordmark. Cream or washed black. $18.</p>
 
-      <div class="spec-sheet">
-        <div class="spec-sheet__head">spec sheet — draft, subject to change</div>
+            <fieldset class="lb-colors" id="colors">
+        <legend>color</legend>
+        <div class="lb-colors__opts">
+          <span><input type="radio" name="color" id="c-cream" value="cream" checked><label for="c-cream"><span class="sw sw--cream"></span>cream</label></span>
+          <span><input type="radio" name="color" id="c-black" value="black"><label for="c-black"><span class="sw sw--black"></span>washed black</label></span>
+        </div>
+      </fieldset>
+      <a class="btn btn--yellow btn--block" id="buyBtn" href="STRIPE_LINK_CREAM" data-stripe-cream="STRIPE_LINK_CREAM" data-stripe-black="STRIPE_LINK_BLACK">buy the hat — $18 →</a>
+      <p class="lb-buy-note" id="buyNote">secure checkout by Stripe. one size fits most.</p>
+
+      <div class="spec-sheet" style="margin-top:36px;">
+        <div class="spec-sheet__head">spec sheet</div>
         <dl>
         <div class="spec-row">
           <dt>Material</dt>
@@ -96,28 +107,24 @@
           <dt>Price</dt>
           <dd>$18</dd>
         </div>
-        <div class="spec-row">
-          <dt>Target drop</dt>
-          <dd>TBD — waitlist size decides timing</dd>
-        </div>
       </dl>
       </div>
 
       <form class="waitlist-form" data-formspree-id="xgawlzzl" data-product="hat">
-        <h2 class="waitlist-form__title">join the waitlist</h2>
-        <p class="waitlist-form__sub">Get notified the moment this one's real. First access, no obligation.</p>
+        <h2 class="waitlist-form__title">restock alerts</h2>
+        <p class="waitlist-form__sub">Sold out of your color? Get an email the moment it's back.</p>
         <div class="field">
           <label for="hat-email">Email address</label>
           <input type="email" id="hat-email" name="email" placeholder="you@notmyworkemail.com" required>
         </div>
         <input type="hidden" name="product" value="Too Hot For Corporate Hat">
         <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" class="btn btn--yellow btn--block">request access →</button>
+        <button type="submit" class="btn btn--yellow btn--block">notify me →</button>
         <p class="form-note">by submitting you agree to receive drop emails. unsubscribe anytime, no exit interview required.</p>
         <p class="form-error" role="alert">Something went wrong — try again in a minute.</p>
         <div class="form-success" role="status">
           <strong>badge issued.</strong>
-          You're on the hat waitlist. We'll email you when it's real.
+          You're on the list. We'll email you about restocks.
         </div>
       </form>
     </div>
