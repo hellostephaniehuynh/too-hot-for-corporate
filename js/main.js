@@ -106,7 +106,7 @@ var HAT_NAMES = { cream: "cream", black: "washed black" };
       if (note) note.textContent = "sold out — use restock alerts below to hear when it's back.";
       return;
     }
-    btn.textContent = "buy the hat — $18 →";
+    btn.textContent = "buy the hat — $22 →";
     if (!url || url.indexOf("STRIPE_LINK") === 0) {
       btn.removeAttribute("href");
       btn.setAttribute("aria-disabled", "true");

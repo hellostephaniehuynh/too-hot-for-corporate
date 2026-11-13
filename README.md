@@ -83,7 +83,7 @@ GitHub Pages or Vercel work the same way if you'd rather host it there.
 ## Turning on checkout (Stripe payment links)
 
 The hat page buy button is disabled until real links are set. In Stripe, create
-a Payment Link for each color ($18, collect shipping address), then in
+a Payment Link for each color ($22 flat, shipping included, so no shipping rate; collect shipping address, US only, limit 49 payments), then in
 `product-hat.html` replace `STRIPE_LINK_CREAM` and `STRIPE_LINK_BLACK`
 (each appears in the `href` and a `data-stripe-*` attribute on `#buyBtn`)
 with the full `https://buy.stripe.com/...` URLs. Push to deploy.
