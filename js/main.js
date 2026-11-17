@@ -48,6 +48,7 @@
       var endpoint = "https://formspree.io/f/" + formId;
       var data = new FormData(form);
 
+      var submitLabel = submitBtn ? submitBtn.textContent : "";
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = "submitting…";
@@ -71,7 +72,7 @@
           if (errorEl) errorEl.style.display = "block";
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.textContent = "request access →";
+            submitBtn.textContent = submitLabel;
           }
         });
     });

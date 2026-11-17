@@ -1140,3 +1140,16 @@ footer.site .wrap { padding-top: 32px; padding-bottom: 40px; }
 footer.site .foot-left, footer.site .foot-links { min-width: 0; max-width: 100%; }
 footer.site .foot-links { flex-wrap: wrap; row-gap: 10px; }
 footer.site .fine-print { overflow-wrap: anywhere; }
+
+/* contact form topic picker: match the other fields */
+.field select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+}
+.field select:focus { outline: 2px solid var(--ink); outline-offset: 2px; }
