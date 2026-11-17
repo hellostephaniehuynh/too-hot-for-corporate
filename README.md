@@ -82,7 +82,9 @@ GitHub Pages or Vercel work the same way if you'd rather host it there.
 
 ## Turning on checkout (Stripe payment links)
 
-The hat page buy button is disabled until real links are set. In Stripe, create
+Checkout is live: `#buyBtn` in `product-hat.html` points at two Payment Links in
+the Too Hot For Corporate Stripe account (cream and washed black). To replace them,
+or if the placeholders are ever restored, the button stays disabled until real links are set. In Stripe, create
 a Payment Link for each color ($22 flat, shipping included, so no shipping rate; collect shipping address, US only, limit 49 payments), then in
 `product-hat.html` replace `STRIPE_LINK_CREAM` and `STRIPE_LINK_BLACK`
 (each appears in the `href` and a `data-stripe-*` attribute on `#buyBtn`)
