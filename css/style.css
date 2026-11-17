@@ -1135,3 +1135,8 @@ footer.site .wrap { padding-top: 32px; padding-bottom: 40px; }
 .mx-hero h1 mark { display: inline-block; line-height: 1; padding: .02em .1em .1em; margin-top: .06em; }
 
 .lb-price__note { font-size: 13px; font-weight: 400; color: var(--ink-soft); margin-left: 8px; letter-spacing: 0; }
+
+/* footer: wrap on narrow screens instead of pushing the page wider */
+footer.site .foot-left, footer.site .foot-links { min-width: 0; max-width: 100%; }
+footer.site .foot-links { flex-wrap: wrap; row-gap: 10px; }
+footer.site .fine-print { overflow-wrap: anywhere; }
